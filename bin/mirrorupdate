@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rm /etc/pacman.d/mirrorlist
+wget -O /etc/pacman.d/_mirrorlist http://www.archlinux.org/mirrorlist/all/
+sed '/^#\S/ s|#||' -i /etc/pacman.d/_mirrorlist
+sed 's/$arch/x86_64/g' -i /etc/pacman.d/_mirrorlist
+rankmirrors -n 10 /etc/pacman.d/_mirrorlist > /etc/pacman.d/mirrorlist
+rm /etc/pacman.d/_mirrorlist
+
