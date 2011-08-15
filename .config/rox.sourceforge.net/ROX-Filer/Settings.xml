@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Settings>
+  <FilerWindow path="/home/axyz/.wallpapers">
+    <X>0</X>
+    <Y>0</Y>
+    <Width>1364</Width>
+    <Height>766</Height>
+    <ShowHidden>1</ShowHidden>
+    <DisplayStyle>0</DisplayStyle>
+    <SortType>0</SortType>
+    <SortOrder>0</SortOrder>
+    <ViewType>0</ViewType>
+    <DetailsType>0</DetailsType>
+    <ShowThumbs>1</ShowThumbs>
+    <FilterType>0</FilterType>
+    <FilterDirectories>0</FilterDirectories>
+  </FilerWindow>
+</Settings>

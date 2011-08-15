@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<groups>
+  <group name="1">
+    <directory>/home/axyz/app/web2py/scripts</directory>
+    <item>web2py.archlinux.sh</item>
+  </group>
+</groups>
