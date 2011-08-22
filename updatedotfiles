@@ -1,0 +1,12 @@
+#!/bin/bash
+cp /etc/rc.conf ~/rootdir/etc/rc.conf
+cp /etc/hosts.allow ~/rootdir/etc/hosts.allow
+cp /etc/hosts ~/rootdir/etc/hosts
+cp /etc/hosts.deny ~/rootdir/etc/hosts.deny
+cp /etc/resolv.conf ~/rootdir/etc/resolv.conf
+cp /etc/inittab ~/rootdir/etc/inittab
+
+cd ~
+git add rootdir/*
+git commit -a -m '-'
+git push
