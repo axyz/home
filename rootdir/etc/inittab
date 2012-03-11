@@ -11,18 +11,17 @@
 #    5    X11
 #    6    Reboot
 
+## Only one of the following two lines can be uncommented!
+# Boot to console
 id:3:initdefault:
+# Boot to X11
 #id:5:initdefault:
 
-rc::sysinit:/etc/qinit.sysinit
+rc::sysinit:/etc/rc.sysinit
 rs:S1:wait:/etc/rc.single
-
-#You can use rc.local instead runlevel 5
-#x:5:respawn:/usr/bin/xdm -nodaemon
-#x:5:respawn:/usr/sbin/gdm -nodaemon
-#x:5:respawn:/usr/bin/kdm -nodaemon
-#x:5:respawn:/usr/bin/slim >& /dev/null
-#x:5:respawn:/bin/su YOURUSER -l -c "/bin/bash --login -c xinit >/dev/null 2>&1"
+rm:2345:wait:/etc/rc.multi
+rh:06:wait:/etc/rc.shutdown
+su:S:wait:/sbin/sulogin -p
 
 # -8 options fixes umlauts problem on login
 c1:2345:respawn:/sbin/fgetty tty1 linux
@@ -32,8 +31,12 @@ c2:2345:respawn:/sbin/fgetty tty2 linux
 #c5:2345:respawn:/sbin/agetty -8 38400 tty5 linux
 #c6:2345:respawn:/sbin/agetty -8 38400 tty6 linux
 
-rm:2345:once:/etc/qinit.multi > /dev/null
-rh:06:once:/etc/rc.shutdown
-su:S:once:/sbin/sulogin -p
-
 ca::ctrlaltdel:/sbin/shutdown -t3 -r now
+
+# Example lines for starting a login manager
+x:5:respawn:/usr/bin/xdm -nodaemon
+#x:5:respawn:/usr/sbin/gdm -nodaemon
+#x:5:respawn:/usr/bin/kdm -nodaemon
+#x:5:respawn:/usr/bin/slim >& /dev/null
+
+# End of file
