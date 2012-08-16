@@ -12,5 +12,5 @@ alias p='pacman'
 alias irb='irb --readline -r irb/completio'n
 alias mvn='sh /opt/maven/bin/mvn'
 PS1='[\u@\h \W]\$ '
-PATH=$PATH:/home/axyz/bin:/home/axyz/app/android-sdk-linux_x86/tools/:/usr/local/bin
+PATH=$PATH:/home/axyz/bin:/home/axyz/app/android-sdk-linux/tools/:/home/axyz/app/android-sdk-linux/platform-tools/:/usr/local/bin
 export PATH

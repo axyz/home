@@ -24,7 +24,7 @@
   <Option name="display_cdev_colour">#000000</Option>
   <Option name="display_adir_colour">#006000</Option>
   <Option name="menu_quick">0</Option>
-  <Option name="toolbar_disable">gtk-close</Option>
+  <Option name="toolbar_disable">gtk-close, gtk-help</Option>
   <Option name="filer_change_size_num">30</Option>
   <Option name="display_exec_colour">#006000</Option>
   <Option name="action_mount_command">mount</Option>
